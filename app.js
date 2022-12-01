@@ -1,34 +1,34 @@
 // // Task1
 // // element -in deyeri null ve undefined olmayanlari qaytar
-// let data = [
-//     { name: 'daniel', age: 45 },
-//     { name: 'john', age: 34 },
-//     { name: 'robert', age: null },
-//     { name: 'jen', age: undefined },
-//     { name: null, age: undefined }
-// ];
+let data = [
+    { name: 'daniel', age: 45 },
+    { name: 'john', age: 34 },
+    { name: 'robert', age: null },
+    { name: 'jen', age: undefined },
+    { name: null, age: undefined }
+];
 
-// data.forEach(function (element) {
-//     if ((element.name != null || element.name != undefined) && (element.age != null || element.age != undefined)) {
-//         console.log(element);
-//     }
-// });
+data.forEach(function (element) {
+    if ((element.name != null || element.name != undefined) && (element.age != null || element.age != undefined)) {
+        console.log(element);
+    }
+});
 
 // Task 2
 // her telebenin pointini 30 bal artirin;
 
-// const students = [
-//     { name: "Leyla", points: 500 },
-//     { name: "Akif", points: 500 },
-//     { name: "Fikret", points: 3000 },
-//     { name: "Rashad", points: 500 },
-//     { name: "Turkan", points: 1900 },
-//     { name: "Sabir", points: 1000 },
-//     { name: "Idris", points: 340 },
-//     { name: "Nijat", points: 940 },
-//     { name: "Ismet", points: 1780 },
-// ];
-// const map1 = students.map(element => console.log(element.points + 30));
+const students = [
+    { name: "Leyla", points: 500 },
+    { name: "Akif", points: 500 },
+    { name: "Fikret", points: 3000 },
+    { name: "Rashad", points: 500 },
+    { name: "Turkan", points: 1900 },
+    { name: "Sabir", points: 1000 },
+    { name: "Idris", points: 340 },
+    { name: "Nijat", points: 940 },
+    { name: "Ismet", points: 1780 },
+];
+const map1 = students.map(element => console.log(element.points + 30));
 
 
 // // Task 3
@@ -45,11 +45,24 @@
 
 
 // // Task4  butun regemlerini yuvarlaqlashdirin
-// let numbers = [1.5, 2.56, 5.1, 12.33];
-// console.log(numbers.map(Math.ceil));
+let numbers = [1.5, 2.56, 5.1, 12.33];
+console.log(numbers.map(Math.ceil));
 
 
-// Task 5
-// Verilmish stringdeki ededleri cemleyin-- > reduce
-const b = "5,4,3,2,1";
-console.log(parseInt(b));
+// // Task 5
+// // Verilmish stringdeki ededleri cemleyin-- > reduce
+// const b = "5,4,3,2,1";
+// const arr = b.split(",").reduce((num1, num2) => Number(num1) + Number(num2), 0);
+// console.log(arr);
+
+
+// other method of task5:
+// const arr = [15, 161, 71, 6];
+// const sum = (accumulator, currentValue, index) => {
+//     const result = accumulator + currentValue;
+//     console.log(
+//         `accumulator: ${accumulator}, currentValue: ${currentValue} index: ${index} result: ${result}`
+//     );
+//     return result;
+// };
+// console.log(arr.reduce(sum, 0));
